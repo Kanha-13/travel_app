@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_place/app.dart';
 import 'package:travel_place/model/location.dart';
 
 class Locations extends StatelessWidget {
@@ -18,6 +19,7 @@ class Locations extends StatelessWidget {
   }
 
   _onLocationTap(BuildContext context, int locationId) {
-    Navigator.pushNamed(context, '/second');
+    Navigator.pushNamed(context, LocationDetailRoute,
+        arguments: {"id": locationId});
   }
 }

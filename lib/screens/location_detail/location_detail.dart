@@ -17,10 +17,7 @@ class LocationDetail extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ImageBanner(location.imagePath),
-          ListView(children: [...textSections(location)])
-        ],
+        children: [ImageBanner(location.imagePath), ...textSections(location)],
       ),
     );
   }
